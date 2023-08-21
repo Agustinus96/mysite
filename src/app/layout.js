@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Navbar from './navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,8 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 backdrop-blur-sm" lang="en">
+      <body className={inter.className}>
+        <Navbar />
+        {children}</body>
     </html>
   )
 }
