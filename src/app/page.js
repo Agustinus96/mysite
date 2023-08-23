@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Blog from '../../components/blog'
 import Footer from '../../components/footer'
 import Link from 'next/link';
 import { getAllPosts } from './lib/api';
