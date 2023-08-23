@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import Blog from '../../components/blog'
 import Footer from '../../components/footer'
+import Link from 'next/link';
+import { getAllPosts } from './lib/api';
 
 
 export default async function Home() {
+
+  const posts = await getAllPosts();
 
   return (
     <main class="row">
@@ -34,7 +38,37 @@ export default async function Home() {
           I studied natural science and social science throughout my education including business managements, physics, chemistry and Japanese literature. I am a fast learner and can work well under pressure and tight deadlines. I have worked for Japanese companies in different industries with many subsidiaries all over the worlds. In one of my earlier job, I was responsible in managing and had to work with top level managements from both parent companies and oversea subsidiaries. I was able to identify a crucial problem and turned it into an opportunity for the company. Through this we manage to achieve a big turn around and recovered 3-years of cummulative loss in 1 year. 
         </h2>
       </div>
-        <Blog />
+      <div class="animate-fade animate-once animate-duration-[1200ms] animate-delay-[1500ms] animate-ease-in-out animate-fill-both border-y-[2px] border-y-indigo-500 bg-cyan-500 text-center py-[30px] m-[auto] py-[50px]">
+      <h1 class="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[1500ms] animate-ease-in-out animate-fill-both text-6xl py-2">
+        My blog
+      </h1>
+
+      <h2 class="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[1500ms] animate-ease-in-out animate-fill-both text-4xl py-2">
+        All posts:
+      </h2>
+      <ul class="flex flex-nowrap overflow-x-auto space-x-8 mx-4">
+        {posts.map((post) => {
+          const { id, date, title } = post;
+          return (
+            <div class="align-center animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[1500ms] animate-ease-in-out animate-fill-both shrink-0 w-4/12 bg-black bg-opacity-40 py-[50px] rounded-[20px] my-[20px]">
+              <li key={id}>
+              <Image
+          class="row m-[auto] py-3 dark:drop-shadow-[0_0_0.3rem_#ffffff70] md:min-w-[120px] item-center"
+          src={`/images/${id}.jpeg`}
+          alt="Next.js Logo"
+          width={120}
+          height={120}
+          priority
+        />
+                <Link href={`/posts/${id}`}>
+                  {date} - {title}
+                </Link>
+              </li>
+            </div>
+          );
+        })}
+      </ul>
+    </div>
         <div class="w-full text-center bg-emerald-900 bg-opacity-60">
         <Footer />
         </div>
