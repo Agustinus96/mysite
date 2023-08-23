@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Footer from '../../components/footer'
 import Link from 'next/link';
-import { getAllPosts } from './lib/api';
 import Blog from '../../components/blog';
 
 
@@ -36,7 +35,9 @@ export default async function Home() {
           I studied natural science and social science throughout my education including business managements, physics, chemistry and Japanese literature. I am a fast learner and can work well under pressure and tight deadlines. I have worked for Japanese companies in different industries with many subsidiaries all over the worlds. In one of my earlier job, I was responsible in managing and had to work with top level managements from both parent companies and oversea subsidiaries. I was able to identify a crucial problem and turned it into an opportunity for the company. Through this we manage to achieve a big turn around and recovered 3-years of cummulative loss in 1 year. 
         </h2>
       </div>
+      <div >
   <Blog />
+  </div>
         <div class="w-full text-center bg-emerald-900 bg-opacity-60">
         <Footer />
         </div>
