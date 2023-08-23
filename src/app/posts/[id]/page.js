@@ -7,7 +7,7 @@ export default async function Post({ params: { id } }) {
   const { html, title, date } = await getPostById(id)
   return (
     <div>
-    <article class="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[1000ms] animate-ease-in-out animate-fill-both">
+    <article class="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[500ms] animate-ease-in-out animate-fill-both">
       <h1 class="font-bold text-center text-[40px] pt-[50px]">{title}</h1>
       <h4 class="text-gray-800 italic m-[auto] text-center">{date}</h4>
       <div className="m-[auto] pt-[30px] w-[80%] max-w-[720px] text-justify pb-[30px]" dangerouslySetInnerHTML={{ __html: html }} />
