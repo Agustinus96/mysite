@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 backdrop-blur-sm" lang="en">
       <body className={inter.className}>
+        <div>
         <Navbar />
+        </div>
         {children}</body>
     </html>
   )

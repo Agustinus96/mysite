@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getPostById, getAllPosts } from "../../lib/api"
+import { getPostById, getAllPosts } from "../../lib/api";
 
 // Generate the post, note that this is a "react server component"! it is
 // allowed to be async

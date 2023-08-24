@@ -3,7 +3,9 @@ import Footer from "../../components/footer";
 import Link from "next/link";
 import Blog from "../../components/blog";
 
+
 export default async function Home() {
+
   return (
     <main class="row">
       <div className="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-500 animate-ease-in-out animate-fill-both w-8/12 md:flex flex-row items-center justify-center py-40 px-[auto] m-[auto]">
@@ -39,11 +41,15 @@ export default async function Home() {
         </h2>
         <h2>
           {/* I studied natural science and social science throughout my education including business managements, physics, chemistry and Japanese literature. I am a fast learner and can work well under pressure and tight deadlines. I have worked for Japanese companies in different industries with many subsidiaries all over the worlds. In one of my earlier job, I was responsible in managing and had to work with top level managements from both parent companies and oversea subsidiaries. I was able to identify a crucial problem and turned it into an opportunity for the company. Through this we manage to achieve a big turn around and recovered 3-years of cummulative loss in 1 year.  */}
-          coming...
-        </h2>
-      </div>
-      <div>
-        <Blog />
+          coming...</h2>
+          <div class="text-left">
+                  <p class="animate-typing overflow-hidden whitespace-nowrap pr-1 font-bold text-4xl text-white">
+                  ...........
+                  </p>
+                </div> 
+                </div>
+      <div class="snap-always snap-x">
+        <Blog class="snap-center overflow-hidden"/>
       </div>
       <div class="w-full text-center bg-emerald-900 bg-opacity-60">
         <Footer />
