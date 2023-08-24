@@ -9,7 +9,7 @@ export default function Navbar() {
           <div className="flex justify-center items-center h-full">
             <ul className="hidden md:flex gap-x-6 text-white">
               <li>
-                <Link href="/about">
+                <Link href="#about">
                   <p>About Us</p>
                 </Link>
               </li>
