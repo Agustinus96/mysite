@@ -6,11 +6,11 @@ import { getPostById, getAllPosts } from "../../lib/api";
 export default async function Post({ params: { id } }) {
   const { html, title, date } = await getPostById(id)
   return (
-    <div>
-    <article class="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[500ms] animate-ease-in-out animate-fill-both">
+    <div class="animate-fade-up animate-once animate-duration-[1200ms] animate-delay-[500ms] animate-ease-in-out animate-fill-both items-center row p-[10%]">
+    <article>
       <h1 class="font-bold text-center text-[40px] pt-[50px]">{title}</h1>
       <h4 class="text-gray-800 italic m-[auto] text-center">{date}</h4>
-      <div className="m-[auto] pt-[30px] w-[80%] max-w-[720px] text-justify pb-[30px]" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="m-[auto] pT-[30px] w-[80%] max-w-[720px] text-justify pb-[30px]" dangerouslySetInnerHTML={{ __html: html }} />
     </article>
     <div class="flex m-[auto] text-center bg-white w-[200px] h-[50px] rounded-xl hover:bg-black hover:text-white ">
     <Link class="m-[auto] font-bold text-blue-500 hover:text-inherit text-center h-[50px] align-middle pt-[12px]" href="/">Back to home </Link>

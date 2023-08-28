@@ -1,4 +1,5 @@
 import './globals.css'
+import './favicon.ico'
 import { Inter } from 'next/font/google'
 import Navbar from './navbar'
 
@@ -11,7 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 backdrop-blur-sm" lang="en">
+    <html class="bg-stone-200">
+      <head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={inter.className}>
         <div>
         <Navbar />

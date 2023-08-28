@@ -1,9 +1,9 @@
 
-import { getAllPosts } from "../src/app/lib/api";
+import { getAllPosts } from "../../src/app/lib/api";
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function Blog() {
+export default async function BlogJP() {
   const posts = await getAllPosts();
 
   return (
