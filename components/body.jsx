@@ -36,7 +36,6 @@ export default function Body() {
         start: "+=130% +=80%",
         end: "+=100% +=30%",
         scrub: true,
-        markers: true,
       },
     });
     timeline.from(entryView1.current, {
